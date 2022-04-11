@@ -1,5 +1,5 @@
 {
-    "name": "vipps/module-payment",
+    "name": "pappgergely/vipps-magento",
     "type": "magento2-module",
     "description": "Vipps Payment Method",
     "license": "proprietary",
