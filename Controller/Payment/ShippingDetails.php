@@ -180,7 +180,7 @@ class ShippingDetails implements ActionInterface, CsrfAwareActionInterface
 
             foreach ($shippingMethods as $key => $shippingMethod) {
                 $methodFullCode = $shippingMethod->getCarrierCode() . '_' . $shippingMethod->getMethodCode();
-                if (!$this->shippingMethodValidator->isValid($methodFullCode)) {
+                if ($quote->getShippingAddress()->getShippingMethod() !== $methodFullCode) {
                     continue;
                 }
 
