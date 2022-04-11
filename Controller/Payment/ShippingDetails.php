@@ -185,10 +185,10 @@ class ShippingDetails implements ActionInterface, CsrfAwareActionInterface
                 }
 
                 $responseData['shippingDetails'][] = [
-                    'isDefault' => 'N',
+                    'isDefault' => 'Y',
                     'priority' => $key,
-                    'shippingCost' => $shippingMethod->getAmount(),
-                    'shippingMethod' => $shippingMethod->getMethodTitle(),
+                    'shippingCost' => 0,
+                    'shippingMethod' => 'Forhåndsvalgt fraktmetode (' . $quote->getShippingAddress()->getShippingDescription() . ')',
                     'shippingMethodId' => $methodFullCode,
                 ];
             }
